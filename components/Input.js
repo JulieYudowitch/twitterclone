@@ -7,7 +7,7 @@ import { RiBarChart2Line } from 'react-icons/ri'
 import { IoCalendarNumberOutline } from "react-icons/io5"
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import data from "@emoji-mart/data"
-//import Picker from "@emoji-mart/react";
+import Picker from "@emoji-mart/react";
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadString } from 'firebase/storage'
 import { db, storage } from "../firebase";
@@ -127,13 +127,13 @@ export default function Input() {
                 </button>
               </div>
             )}
-            {/*showEmojis && (
+            {showEmojis && (
               <div className="absolute mt-[10px] -ml-[40px] max-w-[320px] rounded-[20px]">
                             <Picker
                                 onEmojiSelect={addEmoji}
                                 data={data} theme="dark" />
               </div>
-            )*/}
+            )}
           </div>
         </div>
       </div>
